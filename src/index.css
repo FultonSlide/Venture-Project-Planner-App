@@ -8,14 +8,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url(/img/bench-accounting-nvzvOPQW0gc-unsplash.jpg) no-repeat;
-  background-size: cover;
-  min-height: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.btn, .btn:focus {
+  background-color: #D23763;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: #E5628A;
+}
+
+.nav-wrapper {
+  background-color: transparent;
+}
+.venture-logo {
+  width: 150px;
+  margin: 1rem 0;
 }
 
 form {
@@ -29,6 +43,6 @@ input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=email]:not(.browser-default):focus:not([readonly]),
 input[type=password]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-color: #ec407a;
+  border-color: rgb(212, 31, 31);
   box-shadow: none;
 }
