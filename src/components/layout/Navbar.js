@@ -13,7 +13,7 @@ const Navbar = (props) => {
         <nav className="nav-wrapper z-depth-0">
             <div className="container">
                 <Link to='/' className="brand-logo grey-text text-darken-2"><img src={Venture} className="venture-logo"></img></Link>
-                {links}
+                {auth.isLoaded && links}
             </div>
         </nav>
     )
