@@ -34,13 +34,16 @@ code {
 
 .notifications {
   background-color: #EAEAEA;
+  border-radius: 5px;
 }
 .project-summary {
   background-color: #EAEAEA;
+  border-radius: 5px;
 }
 
 form {
   background-color: #EAEAEA;
+  border-radius: 5px;
   padding: 20px;
   margin-top: 60px;
 }
