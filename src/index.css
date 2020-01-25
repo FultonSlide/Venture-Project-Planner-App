@@ -32,7 +32,15 @@ code {
   margin: 1rem 0;
 }
 
+.notifications {
+  background-color: #EAEAEA;
+}
+.project-summary {
+  background-color: #EAEAEA;
+}
+
 form {
+  background-color: #EAEAEA;
   padding: 20px;
   margin-top: 60px;
 }
@@ -43,6 +51,6 @@ input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=email]:not(.browser-default):focus:not([readonly]),
 input[type=password]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-color: rgb(212, 31, 31);
+  border-color: #D23763;
   box-shadow: none;
 }

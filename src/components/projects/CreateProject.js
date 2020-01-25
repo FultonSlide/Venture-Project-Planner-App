@@ -22,7 +22,7 @@ class CreateProject extends Component {
     render() {
         return (
             <div className="container">
-                <form className="white" onSubmit={this.handleSubmit}>
+                <form className="create-project-form" onSubmit={this.handleSubmit}>
                     <h5 className="grey-text text-darken-3">Create New Project</h5>
                     <div className="input-field">
                         <label htmlFor="title">Title</label>
