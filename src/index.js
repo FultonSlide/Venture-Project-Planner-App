@@ -20,12 +20,17 @@ const store = createStore(
     )
 );
   
-  
+const rrfConfig = {
+    userProfile: "users",
+    useFirestoreForProfile: true,
+    attachAuthIsReady: true
+};
+
 const rrfProps = {
-firebase,
-config: fbConfig,
-dispatch: store.dispatch,
-createFirestoreInstance
+    firebase,
+    config: rrfConfig,
+    dispatch: store.dispatch,
+    createFirestoreInstance
 };
 
 ReactDOM.render(<Provider store={store}><ReactReduxFirebaseProvider {...rrfProps}><App /></ReactReduxFirebaseProvider></Provider>, document.getElementById('root'));
