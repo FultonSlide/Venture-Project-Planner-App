@@ -7,12 +7,11 @@ import { connect } from 'react-redux';
 
 const Navbar = (props) => {
     const { auth, profile } = props;
-    console.log(auth);
     const links = auth.uid ? <SignedInLinks profile={profile}/> : <SignedOutLinks/>;
     return (
         <nav className="nav-wrapper z-depth-0">
             <div className="container">
-                <Link to='/' className="brand-logo grey-text text-darken-2"><img src={Venture} className="venture-logo"></img></Link>
+                <Link to='/' className="grey-text text-darken-2"><img src={Venture} className="venture-logo" alt="Venture"></img></Link>
                 {auth.isLoaded && links}
             </div>
         </nav>
@@ -20,7 +19,6 @@ const Navbar = (props) => {
 };
 
 const mapStateToProps = (state) => {
-    console.log(state);
     return {
         auth: state.firebase.auth,
         profile: state.firebase.profile
