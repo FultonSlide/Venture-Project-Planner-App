@@ -14,30 +14,164 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.highlight-text {
-  color: #D23763;
-}
 
+/* Global custom classes */
+
+.venture-container {
+  max-width: 1000px;
+}
+.component-container {
+  margin-top: 80px;
+}
 .btn, .btn:focus {
   background-color: #D23763;
   transition: all 0.3s;
 }
-
 .btn:hover {
   background-color: #E5628A;
 }
-
-.nav-wrapper {
-  background-color: transparent;
+.venture-nav {
+  position: absolute;
+  top: 0;
+  background: transparent;
+  box-shadow: none;
+  z-index: 1;
+}
+.venture-link, .venture-link:hover {
+  color: #0E2F4F;
+  padding: 0 20px;
+}
+.venture-btn, .venture-btn:focus {
+  width: auto;
+  height: 35px;
+  padding: 0 1.1rem;
+  color: white;
+  background: #D23763;
+  border-radius: 5px;
+  border: none;
+  font-style: normal;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.venture-btn:hover {
+  background-color: #E5628A;
 }
 .venture-logo {
   width: 150px;
   margin: 1rem 0;
 }
+.sign-up-btn {
+  width: 80px;
+  height: 35px;
+  background: #D23763;
+  border-radius: 5px;
+  border: none;
+  font-style: normal;
+  font-weight: 600;
+  margin-left: 20px;
+}
+.sign-up-anchor {
+  padding: 0;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* Landing Page */
+
+.left-col{
+  margin: 8rem 0;
+  padding: 0;
+}
+.landing-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 75px;
+}
+.landing-content-wrapper{
+  margin: 8rem 0;
+}
+.landing-content {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 34px;
+  margin: 2rem 0;
+}
+.landing-btn-wrapper {
+  text-align: left;
+  text-align: center;
+}
+.landing-btn {
+  margin: 1rem;
+  width: 222.03px;
+  height: 68px;
+  padding: 0 1.1rem;
+  color: white;
+  background: #D23763;
+  border-radius: 5px;
+  border: none;
+  font-style: normal;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 52px;
+}
+.landing-btn:hover {
+  background-color: #E5628A;
+}
+.landing-btn:focus {
+  background-color: #D23763;
+}
+.landing-btn-unfocused {
+  margin: 1rem;
+  width: 222.03px;
+  height: 68px;
+  padding: 0 1.1rem;
+  color: #0E2F4F;
+  background-color: white;
+  border: 2px solid #0E2F4F;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 52px;
+}
+.landing-btn-unfocused:hover {
+  background-color: rgba(14, 47, 79, 0.233);
+} 
+.landing-btn-unfocused:focus {
+  background-color: white;
+}
+.landing-bg-wrapper {
+  z-index: -1;
+}
+.landing-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.landing-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  mix-blend-mode: luminosity;
+}
 
 .notifications {
   background-color: #EAEAEA;
   border-radius: 5px;
+}
+.highlight-text {
+  color: #D23763;
 }
 .project-summary {
   background-color: #EAEAEA;

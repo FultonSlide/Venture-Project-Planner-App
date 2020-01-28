@@ -12,7 +12,7 @@ class CreateProject extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.createProject(this.state);
-        this.props.history.push('/');
+        this.props.history.push('/dashboard');
     }
 
     handleChange = (e) => {
@@ -39,7 +39,7 @@ class CreateProject extends Component {
                         <textarea id="content" className="materialize-textarea" onChange={this.handleChange}></textarea>
                     </div>
                     <div className="input-field">
-                        <button className="btn z-depth-0">Create</button>
+                        <button className="venture-btn">Create</button>
                     </div>
                 </form>
             </div>

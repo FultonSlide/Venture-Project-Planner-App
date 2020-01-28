@@ -23,10 +23,10 @@ class SignIn extends Component {
     render() {
         const {authError, auth} = this.props;
 
-        if(auth.uid) return <Redirect to='/' />
+        if(auth.uid) return <Redirect to='/dashboard' />
 
         return (
-            <div className="container">
+            <div className="container component-container">
                 <form className="sign-in-form" onSubmit={this.handleSubmit}>
                     <h5 className="grey-text text-darken-3">Sign In</h5>
                     <div className="input-field">
@@ -38,7 +38,7 @@ class SignIn extends Component {
                         <input type="password" id="password" onChange={this.handleChange}/>
                     </div>
                     <div className="input-field">
-                        <button className="btn z-depth-0">Login</button>
+                        <button className="venture-btn">Login</button>
                         <div className="red-text center">{ authError ? <p>{authError}</p> : null }</div>
                     </div>
                 </form>

@@ -12,7 +12,7 @@ const ProjectDetails = (props) => {
 
     if(project){
         return (
-            <div className="container section project-details">
+            <div className="container section project-details component-container">
                 <div className="card z-depth-0">
                     <div className="card-content">
                         <span className="card-title">{ project.title }</span>
