@@ -8,7 +8,6 @@ const Landing = () => {
         <div className="landing container">
             <div className="row">
                 <div className="left-col col s12 m6">
-                    <div className="landing-bar"></div>
                     <h1 className="landing-title">Plan the projects of tomorrow</h1>
                     <div className="landing-content-wrapper">
                         <p className="landing-content">Venture is a free project planning service that allows you to plan the big moments so you can enjoy the little ones.</p>
@@ -19,9 +18,7 @@ const Landing = () => {
                         <NavLink to="/signin"><button className="landing-btn-unfocused">Login</button></NavLink>
                     </div>
                 </div>
-                <div className="right-col col s12 m6">
-                    
-                </div>
+                <div className="right-col col s0 m6"></div>
             </div>
             <div className="landing-bg-wrapper">
                 <img src={Shape} alt="background" className="landing-bg"/>
