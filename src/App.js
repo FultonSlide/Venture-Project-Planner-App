@@ -16,9 +16,9 @@ class App extends Component {
   }
 
   drawerToggleClickHandler = () => {
-    console.log('side drawer active');
+    console.log('clicked app.js');
     this.setState((prevState) => {
-      return { sideDrawerActive: !prevState}
+      return { sideDrawerActive: !prevState.sideDrawerActive}
     });
   }
 
@@ -28,7 +28,7 @@ class App extends Component {
         <div className="App">
           <Navbar/>
           <BurgerMenu drawerClickHandler={this.drawerToggleClickHandler} sideDrawerActive={this.state.sideDrawerActive}/>
-          <SideDrawer/>
+          <SideDrawer sideDrawerActive={this.state.sideDrawerActive} drawerClickHandler={this.drawerToggleClickHandler}/>
           <Switch>
             <Route exact path="/" component={Landing}></Route>
             <Route path='/project/:id' component={ProjectDetails}></Route>

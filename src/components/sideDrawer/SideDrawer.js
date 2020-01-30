@@ -5,21 +5,11 @@ import { connect } from 'react-redux';
 import './SideDrawer.css';
 
 class SideDrawer extends Component {
-    state = {
-        active: false
-    }
-
-    toggleClass = () => {
-        this.setState((prevState) => {
-            return {active: !prevState.active}
-        });
-    }
-
     render(){
         const { auth, profile } = this.props;
-        const links = auth.uid ? <BurgerSignedInLinks profile={profile} active={this.state.active}/> : <BurgerSignedOutLinks active={this.state.active}/>;
+        const links = auth.uid ? <BurgerSignedInLinks profile={profile} sideDrawerActive={this.props.sideDrawerActive} drawerClickHandler={this.props.drawerClickHandler}/> : <BurgerSignedOutLinks sideDrawerActive={this.props.sideDrawerActive} drawerClickHandler={this.props.drawerClickHandler}/>;
         return(
-            <div className={this.state.active ? "container side-drawer side-drawer-active" : "container side-drawer"}>
+            <div className={this.props.sideDrawerActive ? "side-drawer side-drawer-active" : "side-drawer"}>
                 {auth.isLoaded && links}
             </div>
         )

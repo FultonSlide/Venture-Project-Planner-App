@@ -5,13 +5,13 @@ import { signOut } from '../../store/actions/authActions';
 
 const BurgerSignedInLinks = (props) => {
     return (
-        <ul className={props.active ? "burger-nav-active right burger-nav" : "right burger-nav"}>
-            <li><NavLink to="/dashboard" className={props.active ? "burger-link-active burger-link" : "burger-link"}>Dashboard</NavLink></li>
-            <li><NavLink to="/" className={props.active ? "burger-link-active burger-link" : "burger-link"}>About</NavLink></li>
-            <li><NavLink to="/" className={props.active ? "burger-link-active burger-link" : "burger-link"}>Contact</NavLink></li>
-            <li><NavLink to="/create" className={props.active ? "burger-link-active burger-link" : "burger-link"}>New Project</NavLink></li>
-            <li><a onClick={props.signOut} className={props.active ? "burger-link-active burger-link" : "burger-link"}>Logout</a></li>
-            <li><NavLink to="/" className={props.active ? "burger-link-active initials-active btn btn-floating z-depth-0" : "btn btn-floating z-depth-0"}>{props.profile.initials}</NavLink></li>
+        <ul className={props.sideDrawerActive ? "burger-nav-active right burger-nav" : "right burger-nav"} onClick={props.drawerClickHandler}>
+            <li className="burger-link"><NavLink to="/dashboard" >Dashboard</NavLink></li>
+            <li className="burger-link"><NavLink to="/">About</NavLink></li>
+            <li className="burger-link"><NavLink to="/">Contact</NavLink></li>
+            <li className="burger-link"><NavLink to="/create">New Project</NavLink></li>
+            <li className="burger-link"><a onClick={props.signOut}>Logout</a></li>
+            <li className="initials-button"><NavLink to="/" className="btn btn-floating z-depth-0">{props.profile.initials}</NavLink></li>
         </ul>
     )
 };

@@ -1,1 +1,35 @@
- 
+.burger-nav {
+    margin: 0;
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    transition: all 0.5s;
+    background-color: rgba(14, 47, 79, 1);
+    transform: translateX(200px);
+    z-index: 1;
+}
+
+.burger-nav-active {
+    transform: translateX(0px);
+}
+
+.burger-link {
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.burger-link a {
+    font-weight: bold;
+    color: white;
+}
+
+.sign-up-button {
+    margin-top: 20px;
+}
+
+.initials-button {
+    margin-top: 20px;
+    margin-left: 15px;
+}

@@ -115,13 +115,10 @@ textarea.materialize-textarea:focus:not([readonly]) {
 /* Medium Screens */
 @media only screen and (max-width: 900px) {
   .burger-nav {
-    display: none;
+    display: block;
   }
   .navbar {
     display: none;
-  }
-  .navbar-active {
-    transform: translate(0, 0);
   }
 }
 
