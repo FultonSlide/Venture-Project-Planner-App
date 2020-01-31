@@ -16,11 +16,11 @@ class Dashboard extends Component {
         return (
             <div className="dashboard container component-container">
                 <div className="row">
-                    <div className="col s12 m6">
-                        <ProjectList projects={projects}></ProjectList>
-                    </div>
-                    <div className="col s12 m5 offset-m1">
+                    <div className="col s12 m5">
                         <Notifications notifications={notifications}></Notifications>
+                    </div>
+                    <div className="col s12 m6 push-m1">
+                        <ProjectList projects={projects}></ProjectList>
                     </div>
                 </div>
             </div>

@@ -9,26 +9,31 @@ import CreateProject from './components/projects/CreateProject';
 import Landing from './components/static/Landing';
 import SideDrawer from './components/sideDrawer/SideDrawer';
 import BurgerMenu from './components/sideDrawer/BurgerMenu';
+import Backdrop from './components/sideDrawer/Backdrop';
 
 class App extends Component {
   state = {
     sideDrawerActive: false
   }
 
-  drawerToggleClickHandler = () => {
-    console.log('clicked app.js');
-    this.setState((prevState) => {
-      return { sideDrawerActive: !prevState.sideDrawerActive}
-    });
+  drawerToggleClickHandler = (e) => {
+    console.log(e.target.tagName);
+    if(e.target.tagName !== 'UL'){
+      this.setState((prevState) => {
+        return { sideDrawerActive: !prevState.sideDrawerActive}
+      });
+    }
   }
 
   render(){
+    const backdrop = this.state.sideDrawerActive ? <Backdrop sideDrawerActive={this.state.sideDrawerActive} drawerClickHandler={this.drawerToggleClickHandler}/> : null;
     return (
       <BrowserRouter>
         <div className="App">
           <Navbar/>
           <BurgerMenu drawerClickHandler={this.drawerToggleClickHandler} sideDrawerActive={this.state.sideDrawerActive}/>
           <SideDrawer sideDrawerActive={this.state.sideDrawerActive} drawerClickHandler={this.drawerToggleClickHandler}/>
+          { backdrop }
           <Switch>
             <Route exact path="/" component={Landing}></Route>
             <Route path='/project/:id' component={ProjectDetails}></Route>
