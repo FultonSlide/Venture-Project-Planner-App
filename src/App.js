@@ -17,7 +17,6 @@ class App extends Component {
   }
 
   drawerToggleClickHandler = (e) => {
-    console.log(e.target.tagName);
     if(e.target.tagName !== 'UL'){
       this.setState((prevState) => {
         return { sideDrawerActive: !prevState.sideDrawerActive}

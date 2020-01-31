@@ -107,6 +107,43 @@
     }
     .landing-btn, .landing-btn-unfocused {
       margin: 1rem 3px;
-      width: 380px
+      width: 360px;
+    }
+  }
+
+  /* Small Screens */
+  @media only screen and (max-width: 500px) {
+    .left-col{
+      margin-top: 5vh;
+      margin-bottom: 2vh;
+      padding: 0;
+    }
+    .landing .row {
+      margin-bottom: 0;
+    }
+    .landing-bg {
+      width: 100vw;
+    }
+    .landing-img {
+      width: 100vw;
+    }
+    .landing-title {
+      font-size: 44px;
+      line-height: 65px;
+    }
+    .landing-content {
+      font-size: 1.1rem;
+      line-height: 28px;
+      margin: 2rem 0;
+    }
+    .landing-content-wrapper {
+      margin: 3rem 0;
+    }
+    .landing-btn-wrapper {
+      margin: 1rem 0;
+    }
+    .landing-btn, .landing-btn-unfocused {
+      margin: 1rem 3px;
+      width: 80vw;
     }
   }
